@@ -17,10 +17,27 @@ class UI {
     }
 }
 
-function eventListeners () {
+function eventListeners() {
+    const budgetForm = document.getElementById('budjet-form');
+    const expenseForm = document.getElementById('expense-form');
+    const expenseList = document.getElementById('expense-list');
 
+    //new instance of UI class
+    const ui = new UI();
+    //budjet form submit
+    budjetForm.addEventListener('submit', function(event) {
+
+    });
+    //expense form submit
+    expenseForm.addEventListener('submit', function(event) {
+
+    });
+    //expense click
+    expenseList.addEventListener('click', function() {
+
+    });
 }
 
-document.addEventListener ('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     eventListeners();
 })
