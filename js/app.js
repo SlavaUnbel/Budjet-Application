@@ -15,6 +15,14 @@ class UI {
         this.itemList = [];
         this.itemID = 0;
     }
+    //submit budjet method
+    submitBudjetForm() {
+        const value = this.budjetInput.value;
+        if(value === '' || value < 0) {
+            this.budjetFeedback.classList.add('showItem');
+            this.budjetFeedback.innerHTML = `<p>value cannot be empty or negative</p>`;
+        }
+    }
 }
 
 function eventListeners() {
@@ -26,11 +34,12 @@ function eventListeners() {
     const ui = new UI();
     //budjet form submit
     budjetForm.addEventListener('submit', function(event) {
-
+        event.preventDefault();
+        ui.submitBudjetForm();
     });
     //expense form submit
     expenseForm.addEventListener('submit', function(event) {
-
+        event.preventDefault();
     });
     //expense click
     expenseList.addEventListener('click', function() {
